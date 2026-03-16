@@ -6,7 +6,7 @@ function Moviedetails() {
     const [movie, setMovie] = useState(null)
 
     const getMovie = async () => {
-        const response = await fetch(`http://www.omdbapi.com/apikey.aspx?VERIFYKEY=b107917b-29d9-4e08-b3e8-e3a25519b125&t=${tittel}&plot=full`)
+        const response = await fetch(`https://www.omdbapi.com/?apikey=eb5d064f&t=${tittel}&plot=full`)
         const data = await response.json()
         setMovie(data)
     }

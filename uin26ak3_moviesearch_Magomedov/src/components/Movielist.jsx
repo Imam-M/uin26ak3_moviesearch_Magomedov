@@ -1,4 +1,4 @@
-import Moviecard from './Moviecard'
+import Moviecard from "./Moviecard"
 
 function Movielist({ movies }) {
     if (!movies || movies.length === 0) return null
@@ -6,7 +6,7 @@ function Movielist({ movies }) {
     return (
         <section>
             <ul>
-                {movies.map((movie) => (
+                {movies.map((movie, index) => (
                     <li key={index}>
                         <Moviecard movie={movie} />
                     </li>

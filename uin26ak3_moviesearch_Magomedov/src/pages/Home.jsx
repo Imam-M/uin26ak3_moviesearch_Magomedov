@@ -12,9 +12,11 @@ function Home({ movies }) {
         }
         
         const getMovies = async () => {
-            const response = await fetch(`http://www.omdbapi.com/apikey.aspx?VERIFYKEY=b107917b-29d9-4e08-b3e8-e3a25519b125&s=${input}`)
+            const response = await fetch(`https://www.omdbapi.com/?apikey=eb5d064f&s=${input}&type=movie`)
             const data = await response.json()
-            setResultater(data.Search)
+            if (data.Search) {
+                setResultater(data.Search)
+            }
         }
 
         getMovies()
